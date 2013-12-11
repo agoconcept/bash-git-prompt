@@ -29,7 +29,11 @@ function git_prompt_config()
 
   # Bold
   local BoldGreen="\[\033[1;32m\]"    # Green
+  local BoldYellow="\[\033[1;33m\]"
+  local BoldWhite='\[\033[1;37m\]'
+  local BoldRed="\[\033[1;31m\]"
   local BoldBlue="\[\033[1;34m\]"     # Blue
+  local BoldCyan="\[\033[1;36m\]"
 
   # High Intensty
   local IntenseBlack="\[\033[0;90m\]" # Grey
@@ -38,21 +42,23 @@ function git_prompt_config()
   local Magenta="\[\033[1;95m\]"      # Purple
 
   # Regular Colors
+  local Green="\[\033[0;32m\]"
   local Yellow="\[\033[0;33m\]"
   local White='\[\033[37m\]'
   local Red="\[\033[0;31m\]"
   local Blue="\[\033[0;34m\]"
+  local Cyan="\[\033[0;36m\]"
 
   # Default values for the appearance of the prompt. Configure at will.
-  GIT_PROMPT_PREFIX="["
-  GIT_PROMPT_SUFFIX="]"
+  GIT_PROMPT_PREFIX="("
+  GIT_PROMPT_SUFFIX=")"
   GIT_PROMPT_SEPARATOR="|"
-  GIT_PROMPT_BRANCH="${BoldBlue}"
-  GIT_PROMPT_STAGED="${Red}#"
-  GIT_PROMPT_CONFLICTS="${Red}x"
-  GIT_PROMPT_CHANGED="${Yellow}+"
+  GIT_PROMPT_BRANCH="${BoldCyan}"
+  GIT_PROMPT_STAGED="${BoldBlue}#"
+  GIT_PROMPT_CONFLICTS="${BoldRed}x"
+  GIT_PROMPT_CHANGED="${BoldYellow}+"
   GIT_PROMPT_REMOTE=" "
-  GIT_PROMPT_UNTRACKED="…"
+  GIT_PROMPT_UNTRACKED="${BoldWhite}…"
   GIT_PROMPT_CLEAN="${BoldGreen}✔"
 
   # Various variables you might want for your PS1 prompt instead
