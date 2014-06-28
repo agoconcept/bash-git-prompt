@@ -70,18 +70,6 @@ function git_prompt_config()
     done
   fi
 
-  # Default values for the appearance of the prompt. Configure at will.
-  GIT_PROMPT_PREFIX="("
-  GIT_PROMPT_SUFFIX=")"
-  GIT_PROMPT_SEPARATOR="|"
-  GIT_PROMPT_BRANCH="${BoldCyan}"
-  GIT_PROMPT_STAGED="${BoldBlue}#"
-  GIT_PROMPT_CONFLICTS="${BoldRed}x"
-  GIT_PROMPT_CHANGED="${BoldYellow}+"
-  GIT_PROMPT_REMOTE=" "
-  GIT_PROMPT_UNTRACKED="${BoldWhite}…"
-  GIT_PROMPT_CLEAN="${BoldGreen}✔"
-
   # Various variables you might want for your PS1 prompt instead
   local Time12a="\$(date +%H:%M)"
   # local Time12a="(\$(date +%H:%M:%S))"
